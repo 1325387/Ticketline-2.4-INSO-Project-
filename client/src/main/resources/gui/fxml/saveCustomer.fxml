@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.ticketline.client.gui.controller.CustomerController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="120.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="250.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="120.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="250.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="12.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="454.0" minHeight="10.0" prefHeight="310.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="196.0" minHeight="9.0" prefHeight="56.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="170.0" prefWidth="205.0" spacing="10.0" GridPane.columnIndex="1">
+         <children>
+            <TextField fx:id="saveCustomer_id_tf" disable="true" />
+            <TextField fx:id="saveCustomer_title_tf" />
+            <TextField fx:id="saveCustomer_firstname_tf" />
+            <DatePicker fx:id="saveCustomer_dateOfBirth_dp" editable="false" prefHeight="31.0" prefWidth="153.0" />
+            <TextField fx:id="saveCustomer_address_tf" />
+            <TextField fx:id="saveCustomer_city_tf" />
+            <TextField fx:id="saveCustomer_phonenumber_tf" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="351.0" prefWidth="121.0" spacing="20.0">
+         <children>
+            <Label text="ID" />
+             <Label fx:id="save_title_lbl" text="%title.lbl" />
+            <Label fx:id="save_firstname_lbl" text="%firstname.tc" />
+             <Label fx:id="save_dob_lbl" text="%dob.tc" />
+             <Label fx:id="save_street_lbl" text="%address.tc" />
+             <Label fx:id="save_city_lbl" text="%town.lbl" />
+             <Label fx:id="save_phone_lbl" text="%phone.lbl" />
+            </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="325.0" prefWidth="122.0" spacing="20.0" GridPane.columnIndex="2">
+         <children>
+            <VBox prefHeight="61.0" prefWidth="122.0" />
+            <Label fx:id="save_lastname_lbl" text="%lastname.tc" />
+            <Label fx:id="save_gender_lbl" text="%gender.lbl" />
+            <Label fx:id="save_plz_lbl" text="%plz.lbl" />
+            <Label fx:id="save_country_lbl" text="%country.lbl" />
+            <Label fx:id="save_mail_lbl" text="%mail.lbl" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="439.0" prefWidth="190.0" spacing="10.0" GridPane.columnIndex="3">
+         <children>
+            <VBox prefHeight="70.0" prefWidth="122.0" />
+            <TextField fx:id="saveCustomer_lastname_tf" />
+            <ComboBox fx:id="saveCustomer_gender_cb" prefWidth="150.0" />
+            <TextField fx:id="saveCustomer_postalcode_tf" />
+            <ComboBox fx:id="saveCustomer_country_cb" prefWidth="150.0" />
+            <TextField fx:id="saveCustomer_email_tf" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="149.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="saveCustomer_save_btn" mnemonicParsing="false" onAction="#saveCustomer_save_btn_clicked" text="%save.btn" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="saveCustomer_cancel_btn" mnemonicParsing="false" onAction="#saveCustomer_cancel_btn_clicked" text="%cancel.btn" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+   </children>
+</GridPane>

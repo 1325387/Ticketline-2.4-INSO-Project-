@@ -1,0 +1,5 @@
+.check-box *.box {
+    -fx-padding: 45px;
+    -fx-border-radius: 100px;
+    -fx-background-color: greenyellow;
+}

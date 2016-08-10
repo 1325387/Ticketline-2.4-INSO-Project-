@@ -1,0 +1,5 @@
+.check-box *.box {
+    -fx-padding: 10px 0px 0px 90px;
+    -fx-background-color: lightblue;
+}
+
